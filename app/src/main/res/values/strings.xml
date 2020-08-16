@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Baytar</string>
+    <string name="familyName_txt">اسم العائلة</string>
+    <string name="ploicy_txt">بإتمامي للتسجيل فإني أعد موافقا علي شروط وسياسة الاستخدام الخاصة بتطبيق الصياهه</string>
+    <string name="register">سجل</string>
+    <string name="already_have_an_account">Already have an account ?</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="signup">ٍسجل</string>
+</resources>

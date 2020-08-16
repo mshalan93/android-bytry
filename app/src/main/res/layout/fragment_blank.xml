@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#434242">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="183dp"
+        android:layout_height="190dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="235dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="88dp"
+        android:background="@drawable/rounded_corners"
+        android:drawableLeft="@drawable/ic_name"
+        android:shadowColor="#6E6E6D"
+        android:text="login"
+        app:layout_constraintBottom_toTopOf="@+id/twitter_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.55"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.0">
+
+    </Button>
+
+    <ImageView
+        android:id="@+id/twitter_icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/twitter"
+        app:layout_constraintEnd_toStartOf="@+id/linked_icon"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/facebook_icon"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="396dp" />
+
+    <ImageView
+        android:id="@+id/linked_icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/linkedin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/twitter_icon"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="396dp" />
+
+    <ImageView
+        android:id="@+id/facebook_icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/facebook"
+        app:layout_constraintEnd_toStartOf="@+id/twitter_icon"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="396dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="257dp"
+        android:layout_height="60dp"
+        android:background="@drawable/rounded_corners"
+        android:text="@android:string/cancel"
+        android:textColor="@color/colorPrimary"
+        app:backgroundTint="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="613dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/already_have_an_account"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button2"
+        tools:ignore="MissingConstraints" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
