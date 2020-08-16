@@ -10,15 +10,12 @@ import com.example.bytar.R
 import com.example.bytar.databinding.ActivityLoginBinding
 import net.simplifiedcoding.mvvmsampleapp.util.toast
 
-lateinit var  binding : ActivityLoginBinding
 
 class SignupActivity : AppCompatActivity() ,IAuthListner{
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding  = DataBindingUtil.setContentView(this , R.layout.activity_signup)
-        val viewModel = ViewModelProvider(this).get(AuthViewModel::class.java)
-        binding.viewmodel = viewModel
-        viewModel.iauthListner = this
+        setContentView(R.layout.activity_signup)
+
     }
 
     override fun onStarted(){
