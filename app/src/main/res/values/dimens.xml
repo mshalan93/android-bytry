@@ -5,4 +5,11 @@
     <dimen name="nav_header_vertical_spacing">8dp</dimen>
     <dimen name="nav_header_height">176dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="shadow_height">4dp</dimen>
+    <dimen name="small_margin">8dp</dimen>
+    <dimen name="status_bar_height">24dp</dimen>
+    <dimen name="tool_bar_height">80dp</dimen><!-- status bar(24dp) + tool bar(56dp) -->
+    <dimen name="navigation_bar_padding">46dp</dimen><!-- navigation bar(46dp) -->
+    <dimen name="bottom_navigation_height">104dp</dimen><!-- navigation bar(46dp) + bottom navigation(58dp) -->
 </resources>
