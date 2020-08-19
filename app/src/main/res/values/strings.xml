@@ -23,5 +23,8 @@
     <string name="bottom_layout_behavior" translatable="false">com.sakebook.android.sample.bottomnavigationviewsample.BottomLayoutBehavior</string>
     <string name="go_home">الذهاب اللي الصفحة الرئيسية</string>
     <string name="_966">+966</string>
+    <string name="الاعدادات">الاعدادات</string>
+    <string name="الرئيسية">الرئيسية</string>
+    <string name="الإشعارات">الإشعارات</string>
 
 </resources>
