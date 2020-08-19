@@ -10,23 +10,18 @@ import android.widget.LinearLayout
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProviders
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.viewpager2.widget.ViewPager2
 import androidx.viewpager2.widget.ViewPager2.OnPageChangeCallback
 import com.example.bytar.R
-import com.example.bytar.data.network.IMyApi
 import com.example.bytar.databinding.FragmentHomeBinding
 import com.example.bytar.ui.homeScreen.adapter.CustomAdapter
 import com.example.bytar.ui.homeScreen.viewmodel.CategoryViewModel
-import com.example.bytar.ui.newslider.MyRetrofit
 import com.example.bytar.ui.newslider.MySliderAdapter
 import com.example.bytar.ui.newslider.MySliderList
-import com.example.bytar.ui.newslider.NewSlider
-import okhttp3.ResponseBody
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
+import org.json.JSONObject
+import java.io.IOException
+import java.io.InputStream
 import java.util.*
 
 
@@ -48,7 +43,8 @@ class HomeFragment : Fragment() {
         binding=FragmentHomeBinding.inflate(inflater, container, false)
 
         var categoryViewModel: CategoryViewModel=
-                ViewModelProviders.of(this).get(CategoryViewModel::class.java)
+        ViewModelProvider.NewInstanceFactory().create(CategoryViewModel::class.java)
+        //  ViewModelProviders.of(this).get(CategoryViewModel::class.java)
 
         categoryViewModel.getArrayList().observe(requireActivity(), Observer { categoryViewModels ->
 
@@ -120,15 +116,39 @@ class HomeFragment : Fragment() {
         }
     }
 
+    fun loadJSONFromAsset(): String? {
+        var json: String?=null
+        json=try {
+            val `is`: InputStream = getAssets().open("file.json")
+            val size: Int=`is`.available()
+            val buffer=ByteArray(size)
+            `is`.read(buffer)
+            `is`.close()
+            String(buffer, "UTF-8")
+        } catch (ex: IOException) {
+            ex.printStackTrace()
+            return null
+        }
+        return json
+    }
     private fun getdata() {
+        val obj=JSONObject()
 
-        val call: Unit=MyRetrofit.getInstance().getMyApi().getonbordingdata()
+        mySliderLists = R.string.slider_response as List<MySliderList>?
+        adapter=MySliderAdapter(requireContext(), mySliderLists, binding.viewPager)
+        binding.viewPager!!.adapter=adapter
+        setupIndicator()
+        setupCurrentIndicator(0)
+
+/*
+        val call: Unit =MyRetrofit.getInstance().getMyApi().getonbordingdata()
             .enqueue(object : Callback<List<MySliderList?>> {
                 override fun onResponse(
                     call: Call<List<MySliderList?>>,
                     response: Response<List<MySliderList?>>
                 ) {
-                    mySliderLists=response.body() as List<MySliderList>?
+                    //mySliderLists=response.body() as List<MySliderList>?
+                    mySliderLists = R.string.slider_response as List<MySliderList>?
                     adapter=MySliderAdapter(requireContext(), mySliderLists, binding.viewPager)
                     binding.viewPager!!.adapter=adapter
                     setupIndicator()
@@ -141,6 +161,7 @@ class HomeFragment : Fragment() {
                 ) {
                 }
             })
+*/
     }
 
     private fun setupIndicator() {

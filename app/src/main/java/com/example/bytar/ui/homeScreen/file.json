@@ -1,0 +1,20 @@
+[
+  {
+    "id": "1",
+    "image_url": "https://uniqueandrocode.000webhostapp.com/onbordingscreen/images/1.png",
+    "title": "Unique Andro Code",
+    "desc": "Welcome To Unique Andro Code,You Can Learn android Studio"
+  },
+  {
+    "id": "2",
+    "image_url": "https://uniqueandrocode.000webhostapp.com/onbordingscreen/images/2.png",
+    "title": "Android Tutorial",
+    "desc": "Learn Android Development Tutorial "
+  },
+  {
+    "id": "3",
+    "image_url": "https://uniqueandrocode.000webhostapp.com/onbordingscreen/images/3.png",
+    "title": "Android Application",
+    "desc": "Create Android Application using android studio "
+  }
+]
