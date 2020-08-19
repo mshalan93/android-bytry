@@ -22,5 +22,6 @@
     <string name="signup">ٍسجل</string>
     <string name="bottom_layout_behavior" translatable="false">com.sakebook.android.sample.bottomnavigationviewsample.BottomLayoutBehavior</string>
     <string name="go_home">الذهاب اللي الصفحة الرئيسية</string>
+    <string name="_966">+966</string>
 
 </resources>

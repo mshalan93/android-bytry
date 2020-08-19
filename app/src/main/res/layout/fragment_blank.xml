@@ -23,7 +23,7 @@
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/btn_login"
+        android:id="@+id/submit"
         android:layout_width="235dp"
         android:layout_height="53dp"
         android:layout_marginTop="88dp"
