@@ -16,7 +16,6 @@ import androidx.viewpager2.widget.ViewPager2;
 
 import com.bumptech.glide.Glide;
 import com.example.bytar.R;
-import com.example.bytar.ui.home.HomeActivity;
 
 import java.util.List;
 

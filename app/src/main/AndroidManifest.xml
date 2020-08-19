@@ -10,20 +10,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.newslider.NewSlider" />
-        <activity android:name=".ui.splash.Splash" />
-        <activity android:name=".ui.SuccessActivity" />
-        <activity android:name=".ui.auth.SignupActivity" />
-        <activity android:name=".ui.PreLoginActivity" />
-        <activity android:name=".ui.home.MainActivity">
+        <activity android:name=".ui.newslider.NewSlider"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.home.MainActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.SuccessActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.auth.SignupActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.PreLoginActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.splash.Splash"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.home.HomeActivity" />
-        <activity android:name=".ui.auth.LoginActivity" />
+        <activity android:name=".ui.auth.LoginActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>
