@@ -17,15 +17,12 @@ import com.example.bytar.R
 import com.example.bytar.databinding.FragmentHomeBinding
 import com.example.bytar.ui.homeScreen.adapter.CustomAdapter
 import com.example.bytar.ui.homeScreen.viewmodel.CategoryViewModel
-import com.example.bytar.ui.newslider.MyRetrofit
 import com.example.bytar.ui.newslider.MySliderAdapter
 import com.example.bytar.ui.newslider.MySliderList
+import org.json.JSONException
 import org.json.JSONObject
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 import java.io.IOException
-import java.io.InputStream
+import java.nio.charset.Charset
 import java.util.*
 
 
@@ -119,9 +116,34 @@ class HomeFragment : Fragment() {
 
         }
     }
+    fun loadJSONFromAsset(): String? {
+        var json: String?=null
+        json=try {
+            val `is`=requireActivity().assets.open("file.json")
+            val size=`is`.available()
+            val buffer=ByteArray(size)
+            `is`.read(buffer)
+            `is`.close()
+            Charset.forName("UTF-8").toString()
+        } catch (ex: IOException) {
+            ex.printStackTrace()
+            return null
+        }
+        return json
+    }
 
     private fun getdata() {
-
+        try {
+            val obj=JSONObject(loadJSONFromAsset())
+            mySliderLists=obj as List<MySliderList>?
+            adapter=MySliderAdapter(requireContext(), mySliderLists, binding.viewPager)
+            binding.viewPager!!.adapter=adapter
+            setupIndicator()
+            setupCurrentIndicator(0)
+        } catch (e: JSONException) {
+            e.printStackTrace();
+        }
+/*
         val call: Unit=MyRetrofit.getInstance().getMyApi().getonbordingdata()
             .enqueue(object : Callback<List<MySliderList?>> {
                 override fun onResponse(
@@ -141,6 +163,7 @@ class HomeFragment : Fragment() {
                 ) {
                 }
             })
+*/
     }
 
     private fun setupIndicator() {
