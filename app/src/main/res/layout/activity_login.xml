@@ -45,19 +45,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center|center_horizontal|center_vertical"
                 android:layout_marginTop="28dp"
-                android:text="Customr Login" />
-
-            <EditText
-                android:id="@+id/editTextTextPassword"
-                android:layout_width="281dp"
-                android:layout_height="41dp"
-                android:layout_gravity="center|center_horizontal|center_vertical"
-                android:text="@={viewmodel.email}"
-                android:layout_marginTop="20dp"
-                android:drawableLeft="@drawable/ic_lock"
-                android:ems="10"
-                android:hint="passwrod"
-                android:inputType="textPassword" />
+                android:text="@string/customr_login" />
 
             <EditText
 
@@ -67,10 +55,22 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center|center_horizontal|center_vertical"
                 android:layout_marginTop="15dp"
-                android:drawableLeft="@drawable/ic_email"
+                android:drawableStart="@drawable/ic_email"
                 android:ems="10"
-                android:hint="Email"
+                android:hint="@string/email"
                 android:inputType="textEmailAddress" />
+
+            <EditText
+                android:id="@+id/editTextTextPassword"
+                android:layout_width="281dp"
+                android:layout_height="41dp"
+                android:layout_gravity="center|center_horizontal|center_vertical"
+                android:layout_marginTop="20dp"
+                android:drawableStart="@drawable/ic_lock"
+                android:ems="10"
+                android:hint="passwrod"
+                android:inputType="textPassword"
+                android:text="@={viewmodel.email}" />
 
         </LinearLayout>
 
@@ -78,9 +78,9 @@
             android:layout_width="175dp"
             android:layout_height="47dp"
             android:background="@drawable/rounded_corners"
-            android:drawableLeft="@drawable/ic_name"
+            android:drawableStart="@drawable/ic_name"
             android:shadowColor="#6E6E6D"
-            android:text="login"
+            android:text="@string/login"
             android:id="@+id/button_sign_in"
             app:layout_constraintBottom_toTopOf="@+id/textView"
             app:layout_constraintEnd_toEndOf="parent"
