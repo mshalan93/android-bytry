@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/root_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorAccent">
+
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="171dp"
+                android:layout_height="187dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/img"
+                app:layout_constraintBottom_toTopOf="@+id/guideline4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="335dp"
+                android:layout_height="193dp"
+                android:layout_gravity="center"
+                android:background="@drawable/rounder_corners_login"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@+id/guideline5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/guideline4">
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="122dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|center_horizontal|center_vertical"
+                    android:layout_marginTop="28dp"
+                    android:text="Customr Login" />
+
+                <EditText
+                    android:id="@+id/editTextTextPassword"
+                    android:layout_width="281dp"
+                    android:layout_height="41dp"
+                    android:layout_gravity="center|center_horizontal|center_vertical"
+                    android:layout_marginTop="20dp"
+                    android:drawableLeft="@drawable/ic_lock"
+                    android:ems="10"
+                    android:hint="passwrod"
+                    android:inputType="textPassword" />
+
+                <EditText
+
+                    android:id="@+id/editTextTextPersonName"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|center_horizontal|center_vertical"
+                    android:layout_marginTop="15dp"
+                    android:drawableLeft="@drawable/ic_email"
+                    android:ems="10"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress" />
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="253dp"
+                android:layout_height="47dp"
+                android:background="@drawable/rounded_corners"
+                android:drawableLeft="@drawable/ic_name"
+                android:shadowColor="#6E6E6D"
+                android:text="login"
+                android:id="@+id/button_sign_in"
+                app:layout_constraintBottom_toTopOf="@+id/textView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/guideline5"/>
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="255dp" />
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="@string/already_have_an_account"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints" />
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="506dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+</layout>

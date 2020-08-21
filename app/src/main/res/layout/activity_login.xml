@@ -75,7 +75,7 @@
         </LinearLayout>
 
         <Button
-            android:layout_width="253dp"
+            android:layout_width="175dp"
             android:layout_height="47dp"
             android:background="@drawable/rounded_corners"
             android:drawableLeft="@drawable/ic_name"
@@ -93,7 +93,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_begin="255dp" />
+            app:layout_constraintGuide_percent="0.3"/>
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
@@ -111,7 +111,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_begin="506dp" />
+            app:layout_constraintGuide_percent="0.75" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

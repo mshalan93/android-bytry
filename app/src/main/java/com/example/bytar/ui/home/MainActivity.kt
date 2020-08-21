@@ -6,8 +6,7 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import com.example.bytar.R
-import com.example.bytar.ui.Setting.SettingActivity
-import com.example.bytar.ui.auth.LoginActivity
+import com.example.bytar.ui.SettingActivity
 import com.example.bytar.ui.homeScreen.HomeFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*

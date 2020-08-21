@@ -1,4 +1,4 @@
-package com.example.bytar.ui.Setting
+package com.example.bytar.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

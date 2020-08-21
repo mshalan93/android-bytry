@@ -12,27 +12,24 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.viewpager2.widget.ViewPager2.OnPageChangeCallback
+import androidx.viewpager.widget.ViewPager
 import com.example.bytar.R
 import com.example.bytar.databinding.FragmentHomeBinding
 import com.example.bytar.ui.homeScreen.adapter.CustomAdapter
 import com.example.bytar.ui.homeScreen.viewmodel.CategoryViewModel
-import com.example.bytar.ui.newslider.MySliderAdapter
-import com.example.bytar.ui.newslider.MySliderList
-import org.json.JSONException
-import org.json.JSONObject
-import java.io.IOException
-import java.nio.charset.Charset
 import java.util.*
+import com.example.bytar.ui.homeScreen.SlidingAdapter
 
 
 class HomeFragment : Fragment() {
-    private  var NUM_PAGES=3
-    private  var currentPage=0
 
-    var mySliderLists: List<MySliderList>?=null
-    var adapter: MySliderAdapter?=null
-    var indicatorlay: LinearLayout?=null
+    var mPager: ViewPager?=null
+    var currentPage=0
+    var NUM_PAGES=0
+    private var imageModelArrayList: ArrayList<SlidingModel> ?= null
+
+    val myImageList=
+            intArrayOf(R.drawable.lion, R.drawable.lion, R.drawable.lion)
 
     var customadapter: CustomAdapter? = null
     lateinit var binding: FragmentHomeBinding
@@ -61,129 +58,43 @@ class HomeFragment : Fragment() {
             )
             binding.recyclerview.setAdapter(customadapter)
 
-
         })
 
 
-        indicatorlay=binding.layIndicator as LinearLayout
+        imageModelArrayList = ArrayList()
+        imageModelArrayList = populateList()
+        init()
 
-        getdata()
-        binding.viewPager.registerOnPageChangeCallback(object : OnPageChangeCallback() {
-            override fun onPageSelected(position: Int) {
-                super.onPageSelected(position)
-                setupCurrentIndicator(position)
-            }
-        })
-        //NUM_PAGES =onBordingLists.size();
-        //NUM_PAGES =onBordingLists.size();
+
+        return binding.root
+    }
+    open fun init() {
+        mPager = binding.pager
+        mPager!!.adapter= SlidingAdapter( requireContext() , imageModelArrayList)
+        NUM_PAGES=imageModelArrayList!!.size
+
+        // Auto start of viewpager
         val handler=Handler()
         val Update=Runnable {
             if (currentPage == NUM_PAGES) {
                 currentPage=0
             }
-            binding.viewPager.setCurrentItem(currentPage++, true)
+            mPager!!.setCurrentItem(currentPage++, false)
         }
         val swipeTimer=Timer()
         swipeTimer.schedule(object : TimerTask() {
             override fun run() {
                 handler.post(Update)
             }
-        }, 3000, 3000)
-
-
-        return binding.root
+        }, 5000, 5000)
     }
-    private fun setupCurrentIndicator(index: Int) {
-        val itemcildcount=indicatorlay!!.childCount
-        for (i in 0 until itemcildcount) {
-            val imageView=
-                    indicatorlay!!.getChildAt(i) as ImageView
-            if (i == index) {
-                imageView.setImageDrawable(
-                    ContextCompat.getDrawable(
-                        requireContext(),
-                        R.drawable.indicator_active
-                    )
-                )
-            } else {
-                imageView.setImageDrawable(
-                    ContextCompat.getDrawable(
-                        requireContext(),
-                        R.drawable.indicator_inactive
-                    )
-                )
-            }
-
+    private fun populateList(): ArrayList<SlidingModel>? {
+        val list: ArrayList<SlidingModel> = java.util.ArrayList<SlidingModel>()
+        for (i in 0..2) {
+            val imageModel = SlidingModel()
+            imageModel.image_drawable=myImageList[i]
+            list.add(imageModel)
         }
+        return list
     }
-    fun loadJSONFromAsset(): String? {
-        var json: String?=null
-        json=try {
-            val `is`=requireActivity().assets.open("file.json")
-            val size=`is`.available()
-            val buffer=ByteArray(size)
-            `is`.read(buffer)
-            `is`.close()
-            Charset.forName("UTF-8").toString()
-        } catch (ex: IOException) {
-            ex.printStackTrace()
-            return null
-        }
-        return json
-    }
-
-    private fun getdata() {
-        try {
-            val obj=JSONObject(loadJSONFromAsset())
-            mySliderLists=obj as List<MySliderList>?
-            adapter=MySliderAdapter(requireContext(), mySliderLists, binding.viewPager)
-            binding.viewPager!!.adapter=adapter
-            setupIndicator()
-            setupCurrentIndicator(0)
-        } catch (e: JSONException) {
-            e.printStackTrace();
-        }
-/*
-        val call: Unit=MyRetrofit.getInstance().getMyApi().getonbordingdata()
-            .enqueue(object : Callback<List<MySliderList?>> {
-                override fun onResponse(
-                    call: Call<List<MySliderList?>>,
-                    response: Response<List<MySliderList?>>
-                ) {
-                    mySliderLists=response.body() as List<MySliderList>?
-                    adapter=MySliderAdapter(requireContext(), mySliderLists, binding.viewPager)
-                    binding.viewPager!!.adapter=adapter
-                    setupIndicator()
-                    setupCurrentIndicator(0)
-                }
-
-                override fun onFailure(
-                    call: Call<List<MySliderList?>>,
-                    t: Throwable
-                ) {
-                }
-            })
-*/
-    }
-
-    private fun setupIndicator() {
-        val indicator: Array<ImageView?> = arrayOfNulls(3)
-        val layoutParams=LinearLayout.LayoutParams(
-            ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT
-        )
-        layoutParams.setMargins(4, 0, 4, 0)
-        indicator.indices.forEach { i ->
-            indicator[i]=ImageView(requireContext())
-            indicator[i]!!.setImageDrawable(
-                ContextCompat.getDrawable(
-                    requireContext(),
-                    R.drawable.indicator_inactive
-                )
-            )
-            indicator[i]!!.layoutParams=layoutParams
-            indicatorlay!!.addView(indicator[i])
-        }
-    }
-
-
 }
