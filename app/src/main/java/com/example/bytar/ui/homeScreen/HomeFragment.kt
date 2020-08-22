@@ -5,9 +5,6 @@ import android.os.Handler
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.LinearLayout
-import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -15,10 +12,11 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.viewpager.widget.ViewPager
 import com.example.bytar.R
 import com.example.bytar.databinding.FragmentHomeBinding
-import com.example.bytar.ui.homeScreen.adapter.CustomAdapter
+import com.example.bytar.ui.homeScreen.adapter.HomeRecyclerAdapter
 import com.example.bytar.ui.homeScreen.viewmodel.CategoryViewModel
 import java.util.*
-import com.example.bytar.ui.homeScreen.SlidingAdapter
+import com.example.bytar.ui.homeScreen.adapter.SlidingAdapter
+import com.example.bytar.ui.homeScreen.model.SlidingModel
 
 
 class HomeFragment : Fragment() {
@@ -31,7 +29,7 @@ class HomeFragment : Fragment() {
     val myImageList=
             intArrayOf(R.drawable.lion, R.drawable.lion, R.drawable.lion)
 
-    var customadapter: CustomAdapter? = null
+    var customadapter: HomeRecyclerAdapter? = null
     lateinit var binding: FragmentHomeBinding
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -47,7 +45,7 @@ class HomeFragment : Fragment() {
         categoryViewModel.getArrayList().observe(requireActivity(), Observer { categoryViewModels ->
 
 
-            customadapter=CustomAdapter(requireContext(), categoryViewModels!!)
+            customadapter=HomeRecyclerAdapter(requireContext(), categoryViewModels!!)
             binding.recyclerview!!.setLayoutManager(
                 GridLayoutManager(
                     requireContext(),
@@ -70,7 +68,10 @@ class HomeFragment : Fragment() {
     }
     open fun init() {
         mPager = binding.pager
-        mPager!!.adapter= SlidingAdapter( requireContext() , imageModelArrayList)
+        mPager!!.adapter=SlidingAdapter(
+            requireContext(),
+            imageModelArrayList
+        )
         NUM_PAGES=imageModelArrayList!!.size
 
         // Auto start of viewpager
@@ -91,7 +92,7 @@ class HomeFragment : Fragment() {
     private fun populateList(): ArrayList<SlidingModel>? {
         val list: ArrayList<SlidingModel> = java.util.ArrayList<SlidingModel>()
         for (i in 0..2) {
-            val imageModel = SlidingModel()
+            val imageModel =SlidingModel()
             imageModel.image_drawable=myImageList[i]
             list.add(imageModel)
         }

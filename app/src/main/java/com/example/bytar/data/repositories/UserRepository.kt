@@ -1,57 +1,26 @@
 package com.example.bytar.data.repositories
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import com.example.bytar.data.network.IMyApi
-import okhttp3.ResponseBody
-import retrofit2.Callback
-import retrofit2.Response
+import com.example.bytar.data.network.LoginApiService
+import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
+import com.squareup.moshi.Moshi
+import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
+import retrofit2.Retrofit
+import retrofit2.converter.moshi.MoshiConverterFactory
 
-class UserRepository {
-    fun userLogin(email : String , password : String ) : LiveData<String>{
-        val loginResponse = MutableLiveData<String>()
+private const val BASE_URL = "https://mars.udacity.com/"
 
-        IMyApi().userLogin(email,password)
-            .enqueue(object :Callback<ResponseBody>{
-                override fun onFailure(call: retrofit2.Call<ResponseBody>, t: Throwable) {
-                    loginResponse.value = t.message
-                }
+private val moshi = Moshi.Builder()
+        .add(KotlinJsonAdapterFactory())
+        .build()
 
-                override fun onResponse(
-                    call: retrofit2.Call<ResponseBody>,
-                    response: Response<ResponseBody>
-                ) {
-                    if(response.isSuccessful){
-                        loginResponse.value = response.body()?.toString()
-                    }else{
-                        loginResponse.value = response.errorBody().toString()
-                    }
-                }
+private val retrofit = Retrofit.Builder()
+    .addConverterFactory(MoshiConverterFactory.create(moshi))
+    .addCallAdapterFactory(CoroutineCallAdapterFactory())
+    .baseUrl(BASE_URL)
+    .build()
 
-            })
-        return loginResponse
-    }
-    fun userSignUp(fristName : String , secondName : String , phone : Int ) : LiveData<String>{
-        val loginResponse = MutableLiveData<String>()
-
-        IMyApi().userSignup(fristName,secondName,phone)
-            .enqueue(object :Callback<ResponseBody>{
-                override fun onFailure(call: retrofit2.Call<ResponseBody>, t: Throwable) {
-                    loginResponse.value = t.message
-                }
-
-                override fun onResponse(
-                    call: retrofit2.Call<ResponseBody>,
-                    response: Response<ResponseBody>
-                ) {
-                    if(response.isSuccessful){
-                        loginResponse.value = response.body()?.toString()
-                    }else{
-                        loginResponse.value = response.errorBody().toString()
-                    }
-                }
-
-            })
-        return loginResponse
+object LoginApi {
+    val retrofitService : LoginApiService by lazy {
+        retrofit.create(LoginApiService::class.java)
     }
 }

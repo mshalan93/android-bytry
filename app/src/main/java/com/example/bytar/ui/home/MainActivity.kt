@@ -30,8 +30,6 @@ class MainActivity : AppCompatActivity() {
 
     // create an action bar button
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        // R.menu.mymenu is a reference to an xml file named mymenu.xml which should be inside your res/menu directory.
-        // If you don't have res/menu, just create a directory named "menu" inside res
         menuInflater.inflate(R.menu.setting_menu, menu)
         return super.onCreateOptionsMenu(menu)
     }

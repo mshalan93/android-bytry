@@ -1,4 +1,4 @@
-package com.example.bytar.ui.homeScreen;
+package com.example.bytar.ui.homeScreen.adapter;
 
 import android.content.Context;
 import android.os.Parcelable;
@@ -11,16 +11,17 @@ import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 
 import com.example.bytar.R;
+import com.example.bytar.ui.homeScreen.model.SlidingModel;
 
 import java.util.ArrayList;
 
 public class SlidingAdapter extends PagerAdapter {
 
-    private ArrayList<SlidingModel> imageModelArrayList;
-    private LayoutInflater inflater;
-    private Context context;
+    public ArrayList<SlidingModel> imageModelArrayList;
+    public LayoutInflater inflater;
+    public Context context;
 
-    SlidingAdapter(Context context, ArrayList<SlidingModel> imageModelArrayList) {
+    public SlidingAdapter(Context context, ArrayList<SlidingModel> imageModelArrayList) {
         this.context = context;
         this.imageModelArrayList = imageModelArrayList;
         inflater = LayoutInflater.from(context);

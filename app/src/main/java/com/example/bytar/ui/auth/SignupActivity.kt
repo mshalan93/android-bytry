@@ -10,10 +10,9 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.bytar.R
 import com.example.bytar.databinding.ActivitySignupBinding
 import com.example.bytar.ui.SuccessActivity
-import net.simplifiedcoding.mvvmsampleapp.util.toast
 
 
-class SignupActivity : AppCompatActivity() ,IAuthListner{
+class SignupActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySignupBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,20 +26,4 @@ class SignupActivity : AppCompatActivity() ,IAuthListner{
         }
     }
 
-    override fun onStarted(){
-        toast("Signup start")
-        //      progress_bar.show()
-    }
-
-    override fun onSuccess(loginResponse: LiveData<String>) {
-        loginResponse.observe(this, Observer {
-            //        progress_bar.hide()
-            toast(it)
-        })
-    }
-
-    override fun onFail(message: String) {
-        //  progress_bar.hide()
-        toast(message)
-    }
 }

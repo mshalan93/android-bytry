@@ -7,7 +7,7 @@
     <data>
         <variable
             name="viewmodel"
-            type="com.example.bytar.ui.auth.AuthViewModel" />
+            type="com.example.bytar.ui.auth.LoginViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -49,7 +49,7 @@
 
             <EditText
 
-                android:text="@={viewmodel.password}"
+                android:text="@{viewmodel._email}"
                 android:id="@+id/editTextTextPersonName"
                 android:layout_width="280dp"
                 android:layout_height="wrap_content"
@@ -70,7 +70,7 @@
                 android:ems="10"
                 android:hint="passwrod"
                 android:inputType="textPassword"
-                android:text="@={viewmodel.email}" />
+                android:text="@{viewmodel._password}"/>
 
         </LinearLayout>
 
@@ -81,6 +81,7 @@
             android:drawableStart="@drawable/ic_name"
             android:shadowColor="#6E6E6D"
             android:text="@string/login"
+            android:onClick="@{() -> viewmodel.Login()}"
             android:id="@+id/button_sign_in"
             app:layout_constraintBottom_toTopOf="@+id/textView"
             app:layout_constraintEnd_toEndOf="parent"

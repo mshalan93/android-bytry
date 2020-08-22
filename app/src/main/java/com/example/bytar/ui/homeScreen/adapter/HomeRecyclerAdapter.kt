@@ -8,8 +8,8 @@ import com.example.bytar.R
 import com.example.bytar.databinding.CategoryBinding
 import com.example.bytar.ui.homeScreen.viewmodel.CategoryViewModel
 
-class CustomAdapter(private val context: Context, private val arrylist:ArrayList<CategoryViewModel>):
-    RecyclerView.Adapter<CustomAdapter.CustomView>()
+class HomeRecyclerAdapter(private val context: Context, private val arrylist:ArrayList<CategoryViewModel>):
+    RecyclerView.Adapter<HomeRecyclerAdapter.CustomView>()
 
 {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CustomView {
@@ -29,25 +29,15 @@ class CustomAdapter(private val context: Context, private val arrylist:ArrayList
     }
 
     override fun onBindViewHolder(holder: CustomView, position: Int) {
-
         val categoryViewModel = arrylist[position]
         holder.bind(categoryViewModel)
-
-
-
     }
-
-
     class CustomView(val categoryBinding: CategoryBinding):RecyclerView.ViewHolder(categoryBinding.root)
-
-
     {
         fun bind (categoryViewModel : CategoryViewModel)
         {
-
             this.categoryBinding.categorymodel = categoryViewModel
             categoryBinding.executePendingBindings()
         }
-
     }
 }
