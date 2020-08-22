@@ -20,8 +20,6 @@ class LoginViewModel : ViewModel() {
     private var viewModelJob = Job()
     private val coroutineScope = CoroutineScope(viewModelJob + Dispatchers.Main )
 
-    val response: LiveData<String>
-        get() = _response
 
     private val email = MutableLiveData<String>()
     val _email: LiveData<String>
@@ -38,7 +36,7 @@ class LoginViewModel : ViewModel() {
 
       fun Login() {
         // _response.value = "Set the Mars API Response here!"
-    /*    coroutineScope.launch {
+     coroutineScope.launch {
             var LoginDeferred = LoginApi.retrofitService.Login(email ="mohamed@gmail.com" ,password = "123")
             try {
                 var listResult = LoginDeferred.await()
@@ -46,8 +44,7 @@ class LoginViewModel : ViewModel() {
             } catch (e: Exception) {
                 _response.value = "Failure: ${e.message}"
             }
-        }*/
-        Log.d("Login dada", "\"email is  ${email.value.toString()} and password is ${password.value.toString()} \"")
+        }
     }
 
     override fun onCleared() {

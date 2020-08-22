@@ -81,7 +81,6 @@
             android:drawableStart="@drawable/ic_name"
             android:shadowColor="#6E6E6D"
             android:text="@string/login"
-            android:onClick="@{() -> viewmodel.Login()}"
             android:id="@+id/button_sign_in"
             app:layout_constraintBottom_toTopOf="@+id/textView"
             app:layout_constraintEnd_toEndOf="parent"
