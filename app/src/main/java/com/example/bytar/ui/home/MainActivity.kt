@@ -22,34 +22,6 @@ class MainActivity : AppCompatActivity() {
 		setContentView(R.layout.activity_main)
 
 		setSupportActionBar(toolbar)
-		//    bottomNavigationView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
-
-/*
-
-        val navView=findViewById<BottomNavigationView>(R.id.nav_view)
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-        val appBarConfiguration=AppBarConfiguration.Builder(
-            R.id.homeFragment, R.id.shopFragment, R.id.datesFragment, R.id.messagesFragment,R.id.searchFragment
-        )
-            .build()
-        val navController=Navigation.findNavController(this, R.id.nav_host_fragment)
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration)
-        NavigationUI.setupWithNavController(navView, navController)
-
-        navController.addOnDestinationChangedListener { controller, destination, arguments ->
-            val id=destination.id
-            when (id) {
-                R.id.shopFragment -> Toast.makeText(
-                    this,
-                    "Dashboard",
-                    Toast.LENGTH_LONG
-                ).show()
-            }
-        }
-*/
 
 		val bottomNavigationView=findViewById<BottomNavigationView>(R.id.nav_view)
 		val navController=findNavController(R.id.nav_host_fragment)
@@ -69,16 +41,6 @@ class MainActivity : AppCompatActivity() {
 	}
 
 
-/*
-        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
-        val navController = findNavController(R.id.myNavHostFragment)
-        val appBarConfigration = AppBarConfiguration(setOf(R.id.homeFragment,R.id.shopFragment,R.id.datesFragment,R.id.messagesFragment,R.id.searchFragment))
-        setupActionBarWithNavController(navController,appBarConfigration)
-        bottomNavigationView.setupWithNavController(navController)
-*/
-
-
-	// create an action bar button
 	override fun onCreateOptionsMenu(menu: Menu?): Boolean {
 		menuInflater.inflate(R.menu.setting_menu, menu)
 		return super.onCreateOptionsMenu(menu)
@@ -87,7 +49,7 @@ class MainActivity : AppCompatActivity() {
 	// setting button activities
 	override fun onOptionsItemSelected(item: MenuItem): Boolean {
 		val id: Int=item.getItemId()
-		if (id == R.id.mybutton) {
+		if (id == R.id.settingBtn) {
 			// do something here
 			val nextScreenIntent=Intent(this, SettingActivity::class.java)
 			startActivity(nextScreenIntent)
@@ -95,42 +57,4 @@ class MainActivity : AppCompatActivity() {
 		return super.onOptionsItemSelected(item)
 	}
 }
-/* private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { menuItem ->
-	 when (menuItem.itemId) {
-		 R.id.navigation_Home -> {
-			 val fragment =HomeFragment()
-			 supportFragmentManager.beginTransaction().replace(R.id.container, fragment, fragment.javaClass.getSimpleName())
-				 .commit()
-			 return@OnNavigationItemSelectedListener true
-		 }
-		 R.id.navigation_Shop -> {
-			 val fragment = DatesFragment()
-			 supportFragmentManager.beginTransaction().replace(R.id.container, fragment, fragment.javaClass.getSimpleName())
-				 .commit()
-			 return@OnNavigationItemSelectedListener true
-		 }
-		 R.id.navigation_Dates -> {
-			 val fragment = ShopFragment()
-			 supportFragmentManager.beginTransaction().replace(R.id.container, fragment, fragment.javaClass.getSimpleName())
-				 .commit()
-			 return@OnNavigationItemSelectedListener true
-		 }
-
-		 R.id.navigation_Messages -> {
-			 val fragment = DatesFragment()
-			 supportFragmentManager.beginTransaction().replace(R.id.container, fragment, fragment.javaClass.getSimpleName())
-				 .commit()
-			 return@OnNavigationItemSelectedListener true
-		 }
-
-		 R.id.navigation_Search -> {
-			 val fragment = DatesFragment()
-			 supportFragmentManager.beginTransaction().replace(R.id.container, fragment, fragment.javaClass.getSimpleName())
-				 .commit()
-			 return@OnNavigationItemSelectedListener true
-		 }
-	 }
-	 false
- }
-*/
 
