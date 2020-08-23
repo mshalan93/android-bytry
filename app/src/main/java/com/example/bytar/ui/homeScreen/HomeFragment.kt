@@ -46,7 +46,7 @@ class HomeFragment : Fragment() {
 
 
             customadapter=HomeRecyclerAdapter(requireContext(), categoryViewModels!!)
-            binding.recyclerview!!.setLayoutManager(
+            binding.recyclerview.setLayoutManager(
                 GridLayoutManager(
                     requireContext(),
                     3,
