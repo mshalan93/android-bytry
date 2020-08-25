@@ -16,7 +16,7 @@
             android:name=".ui.SettingActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.home.MainActivity"
+            android:name=".ui.splash.Splash"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.SuccessActivity"
@@ -28,7 +28,7 @@
             android:name=".ui.PreLoginActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.splash.Splash"
+            android:name=".ui.home.MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

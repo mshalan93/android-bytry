@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "26456638474",
+    "firebase_url": "https://baytari.firebaseio.com",
+    "project_id": "baytari",
+    "storage_bucket": "baytari.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:26456638474:android:0dee36ba4c8b7cd8750bf3",
+        "android_client_info": {
+          "package_name": "com.ashhalan.baytari"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "26456638474-541dihfhmo89ddje6j210b7ptbtjgjjg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ashhalan.baytari",
+            "certificate_hash": "d5ceb6301383bd4de351db6f7fb6b5c51e5ffd3e"
+          }
+        },
+        {
+          "client_id": "26456638474-j7k9b20aqe2qo04jr87ufgqbnj42n76e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBr1r8_cEG72peDZV1yrII4j6GTFSBkwLM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "26456638474-j7k9b20aqe2qo04jr87ufgqbnj42n76e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

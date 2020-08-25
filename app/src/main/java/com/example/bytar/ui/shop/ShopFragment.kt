@@ -1,26 +1,23 @@
-package com.example.bytar.ui.homeScreen
+package com.example.bytar.ui.shop
 
 import android.os.Bundle
 import android.os.Handler
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.viewpager.widget.ViewPager
 import com.example.bytar.R
-import com.example.bytar.databinding.FragmentHomeBinding
-import com.example.bytar.ui.homeScreen.adapter.HomeRecyclerAdapter
-import com.example.bytar.ui.homeScreen.viewmodel.CategoryViewModel
+import com.example.bytar.databinding.FragmentShopBinding
+import com.example.bytar.ui.shop.adapter.ShopRecyclerAdapter
+import com.example.bytar.ui.shop.adapter.SlidingAdapter
+import com.example.bytar.ui.shop.model.SlidingModel
+import com.example.bytar.ui.shop.viewmodel.ShopViewModel
 import java.util.*
-import com.example.bytar.ui.homeScreen.adapter.SlidingAdapter
-import com.example.bytar.ui.homeScreen.model.SlidingModel
 
-
-class HomeFragment : Fragment() {
-
+class ShopFragment : Fragment() {
     var mPager: ViewPager?=null
     var currentPage=0
     var NUM_PAGES=0
@@ -29,24 +26,21 @@ class HomeFragment : Fragment() {
     val myImageList=
             intArrayOf(R.drawable.lion, R.drawable.lion, R.drawable.lion)
 
-    var customadapter: HomeRecyclerAdapter? = null
-    lateinit var binding: FragmentHomeBinding
+    var customadapter: ShopRecyclerAdapter? = null
+
+    lateinit var binding: FragmentShopBinding
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding=FragmentHomeBinding.inflate(inflater, container, false)
+        binding = FragmentShopBinding.inflate(inflater, container, false)
+        var shopViewModel: ShopViewModel=
+                ViewModelProvider.NewInstanceFactory().create(ShopViewModel::class.java)
 
-        var categoryViewModel: CategoryViewModel=
-        ViewModelProvider.NewInstanceFactory().create(CategoryViewModel::class.java)
-        //  ViewModelProviders.of(this).get(SearchViewModel::class.java)
-
-        categoryViewModel.getArrayList().observe(requireActivity(), Observer { categoryViewModels ->
-
-
-            customadapter=HomeRecyclerAdapter(requireContext(), categoryViewModels!!)
-            binding.homeRecyclerview.setLayoutManager(
+        shopViewModel.getArrayList().observe(requireActivity(), androidx.lifecycle.Observer {
+            customadapter=ShopRecyclerAdapter(requireContext(), it!!)
+            binding.shopRecyclerview.setLayoutManager(
                 GridLayoutManager(
                     requireContext(),
                     3,
@@ -54,18 +48,19 @@ class HomeFragment : Fragment() {
                     false
                 )
             )
-            binding.homeRecyclerview.setAdapter(customadapter)
+            binding.shopRecyclerview.setAdapter(customadapter)
 
         })
-
 
         imageModelArrayList = ArrayList()
         imageModelArrayList = populateList()
         init()
 
 
+
         return binding.root
     }
+
     open fun init() {
         mPager = binding.pager
         mPager!!.adapter=SlidingAdapter(

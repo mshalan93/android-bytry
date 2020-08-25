@@ -16,7 +16,7 @@ class HomeRecyclerAdapter(private val context: Context, private val arrylist:Arr
 
         val layoutInflater = LayoutInflater.from(parent.context)
 
-        val categoryBinding: CategoryBinding = DataBindingUtil.inflate(layoutInflater, R.layout.innerlayout,parent,false)
+        val categoryBinding: CategoryBinding = DataBindingUtil.inflate(layoutInflater, R.layout.list_item_home_recycler,parent,false)
 
         return CustomView(categoryBinding)
 

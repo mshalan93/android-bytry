@@ -44,5 +44,7 @@
     <string name="search">Search</string>
     <string name="shop">shop</string>
     <string name="home">Home</string>
+    <string name="shopname">اسم المتجر</string>
+    <string name="jop">الوظيفة</string>
 
 </resources>
