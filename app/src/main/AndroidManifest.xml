@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".ui.SettingActivity"
+            android:name=".ui.setting.SettingActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.splash.Splash"
