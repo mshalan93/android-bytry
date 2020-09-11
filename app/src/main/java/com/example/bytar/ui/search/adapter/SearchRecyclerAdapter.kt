@@ -7,7 +7,6 @@ import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.bytar.R
 
-import com.example.bytar.databinding.FragmentSearchBinding
 import com.example.bytar.databinding.SearchBinding
 import com.example.bytar.ui.search.viewmodel.SearchViewModel
 

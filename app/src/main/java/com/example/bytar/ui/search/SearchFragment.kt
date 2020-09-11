@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
 import android.widget.SearchView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -19,7 +18,6 @@ class SearchFragment : Fragment() {
 
     private val searchViewModel: SearchViewModel?=null
     var customadapter: SearchRecyclerAdapter? = null
-    private lateinit var viewManager: RecyclerView.LayoutManager
     lateinit var binding: FragmentSearchBinding
     override fun onCreateView(
         inflater: LayoutInflater,

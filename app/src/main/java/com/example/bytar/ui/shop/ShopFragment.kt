@@ -54,13 +54,14 @@ class ShopFragment : Fragment() {
 
         imageModelArrayList = ArrayList()
         imageModelArrayList = populateList()
-        init()
+      //  init()
 
 
 
         return binding.root
     }
 
+/*
     open fun init() {
         mPager = binding.pager
         mPager!!.adapter=SlidingAdapter(
@@ -84,6 +85,7 @@ class ShopFragment : Fragment() {
             }
         }, 5000, 5000)
     }
+*/
     private fun populateList(): ArrayList<SlidingModel>? {
         val list: ArrayList<SlidingModel> = java.util.ArrayList<SlidingModel>()
         for (i in 0..2) {

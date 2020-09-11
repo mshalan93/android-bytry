@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.NavHostFragment.findNavController
 import com.example.bytar.R
 import com.example.bytar.databinding.FragmentProfileSettingBinding
 
@@ -24,7 +25,7 @@ class ProfileSettingFragment : Fragment() {
 
         binding.orderTxtView.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View?) {
-                view?.findNavController()?.navigate(R.id.action_profileSettingFragment_to_orderFragment)
+                Navigation.findNavController(view!!).navigate(R.id.action_profileSettingFragment_to_orderFragment)
 
             }
         })

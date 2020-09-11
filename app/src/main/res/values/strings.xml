@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Baytar</string>
+    <string name="app_name">بيطري</string>
     <string name="familyName_txt">اسم العائلة</string>
     <string name="ploicy_txt">بإتمامي للتسجيل فإني أعد موافقا علي شروط وسياسة الاستخدام الخاصة بتطبيق الصياهه</string>
     <string name="register">سجل</string>
@@ -35,6 +35,7 @@
     <string name="language">اللغة</string>
     <string name="setting">الاعدادات</string>
     <string name="job">الوظيفة</string>
+    <string name="email_ar">البريد الإلكتروني</string>
     <string name="personal_information">المعلومات الشخصية</string>
     <string name="phone_number">رقم الهاتف</string>
     <string name="frist_name">الاسم الأول</string>
@@ -46,5 +47,39 @@
     <string name="home">Home</string>
     <string name="shopname">اسم المتجر</string>
     <string name="jop">الوظيفة</string>
+    <string name="familyName">اسم العائلة</string>
+    <string name="fristName">الاسم الاول</string>
+    <string name="order_reciever_number">رقم مستلم الطلب</string>
+    <string name="please_write_more_details">الرجاء كتابه رقم المبني و اسم الشارع</string>
+    <string name="user_name">اسم المستخدم</string>
+    <string name="password">كلمة السر</string>
+    <string name="no_account_sign_up">NO ACCOUNT ? SIGN UP</string>
+    <string name="forget_password">هل نسيت كلمة المرور ؟</string>
+    <string name="sign_as_baytary">سجل كبيطري</string>
+    <string name="sign_as_visitor">سجل كزائر</string>
+    <string name="sign_as_dealer">سجل كتاجر</string>
+    <string name="clinic_place">مكان العيادة</string>
+    <string name="elryad">الرياض</string>
+    <string name="price">السعر</string>
+    <string name="male">ذكر</string>
+    <string name="profile_pic">صورة الهوية</string>
+    <string name="conditions">الشروط و الأحكام</string>
+    <string name="licence_frist">بإتمامي للتسجيل فإني اعد موافقا علي</string>
+    <string name="licencetext">الخاصه بهذا التطبيق</string>
+    <string name="sign_up_">سجل</string>
+    <string name="choose_on_map">تحديد المكان علي الخريطه</string>
+    <string name="store_photos">صور واجهه المحل</string>
+    <string name="products___">منتجات /منتجات /منتجات</string>
+    <string name="elsgl_eltogary">ًصوره السجل التجاري</string>
+    <string name="success_sign_up">تم إنشاء الحساب بنجاح</string>
+    <string name="female">أنثي</string>
+    <string name="price_">السعر 2.600 رس</string>
+    <string name="product_name">إسم المنتج</string>
+    <string name="offer_description">شرح عن العرض</string>
+    <string name="best_offer">افضل العروض</string>
+    <string name="bytary_client">متاجر بيطري</string>
+    <string name="harag_byray">حراج بيطري</string>
+    <string name="add_ads">إضافة إعلان</string>
+
 
 </resources>
