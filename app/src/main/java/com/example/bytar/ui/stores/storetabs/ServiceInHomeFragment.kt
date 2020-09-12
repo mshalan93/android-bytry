@@ -1,4 +1,4 @@
-package com.example.bytar.ui.stores
+package com.example.bytar.ui.stores.storetabs
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

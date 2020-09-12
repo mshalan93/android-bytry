@@ -5,8 +5,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import androidx.appcompat.app.ActionBar
+import androidx.databinding.DataBindingUtil
 import androidx.viewpager.widget.ViewPager
 import com.example.bytar.R
+import com.example.bytar.databinding.ActivityStoresBinding
 import com.example.bytar.ui.home.MainActivity
 import com.example.bytar.ui.setting.SettingActivity
 import com.google.android.material.tabs.TabLayout
@@ -15,16 +18,19 @@ import kotlinx.android.synthetic.main.activity_main.*
 class StoresActivity : AppCompatActivity() {
     lateinit var tabLayout: TabLayout
     lateinit var viewPager: ViewPager
+    private lateinit var binding : ActivityStoresBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_stores)
+        binding  = DataBindingUtil.setContentView(this , R.layout.activity_stores)
 
         setSupportActionBar(toolbar)
+        getSupportActionBar()?.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        getSupportActionBar()?.setCustomView(R.layout.stores_toolbar);
 
 
 
-        tabLayout = findViewById(R.id.tabLayout)
-        viewPager = findViewById(R.id.viewPager)
+        tabLayout = binding.tabLayout
+        viewPager = binding.viewPager
 
         tabLayout.addTab(tabLayout.newTab().setText("متجر بيطري"))
         tabLayout.addTab(tabLayout.newTab().setText("تقديم الخدمة في مكان الحيوان"))
@@ -42,6 +48,12 @@ class StoresActivity : AppCompatActivity() {
             }
             override fun onTabReselected(tab: TabLayout.Tab) {}
         })
+
+
+  /*      binding.homeIc.setOnClickListener {
+            val nextScreenIntent =Intent(this, MainActivity::class.java)
+            startActivity(nextScreenIntent)
+        }*/
     }
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.home_menu, menu)
@@ -53,8 +65,9 @@ class StoresActivity : AppCompatActivity() {
         val id: Int=item.getItemId()
         if (id == R.id.homeBtn) {
             // do something here
-            val homeIntent=Intent(this, MainActivity::class.java)
-            startActivity(homeIntent)
+            val nextScreenIntent =Intent(this, MainActivity::class.java)
+            startActivity(nextScreenIntent)
+
         }
         return super.onOptionsItemSelected(item)
     }

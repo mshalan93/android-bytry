@@ -80,6 +80,13 @@
     <string name="bytary_client">متاجر بيطري</string>
     <string name="harag_byray">حراج بيطري</string>
     <string name="add_ads">إضافة إعلان</string>
+    <string name="search_ar">بحث</string>
+    <string name="now">الان</string>
+    <string name="ryad">الرياض</string>
+    <string name="doctor_list">قائمة الاطباء</string>
+    <string name="_2_600">السعر 2.600 رس</string>
+    <string name="appointment_booking">حجز الموعد</string>
+    <string name="doctor_rate">تقييم الطبيب</string>
 
 
 </resources>
