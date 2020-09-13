@@ -9,8 +9,14 @@
         android:name="com.example.bytar.ui.homefragment.HomeFragment"
         android:label="HomeFragment" >
         <action
-            android:id="@+id/action_homeFragment_to_storesActivity"
-            app:destination="@id/storesActivity" />
+            android:id="@+id/action_homeFragment_to_hyperMarketActivity"
+            app:destination="@id/hyperMarketActivity" />
+        <action
+            android:id="@+id/action_homeFragment_to_doctorsActivity"
+            app:destination="@id/doctorsActivity" />
+        <action
+            android:id="@+id/action_homeFragment_to_storesBytaryFragment"
+            app:destination="@id/storesBytaryFragment" />
     </fragment>
     <fragment
         android:id="@+id/messagesFragment"
@@ -32,22 +38,33 @@
         android:name="com.example.bytar.ui.shop.ShopFragment"
         android:label="fragment_shop"
         tools:layout="@layout/fragment_shop" />
-    <fragment
-        android:id="@+id/orderFragment"
-        android:name="com.example.bytar.ui.order.OrderFragment"
-        android:label="fragment_order"
-        tools:layout="@layout/fragment_order" />
-    <fragment
-        android:id="@+id/profileSettingFragment"
-        android:name="com.example.bytar.ui.setting.ProfileSettingFragment"
-        android:label="ProfileSettingFragment" >
-        <action
-            android:id="@+id/action_profileSettingFragment_to_orderFragment"
-            app:destination="@id/orderFragment" />
-    </fragment>
     <activity
-        android:id="@+id/storesActivity"
-        android:name="com.example.bytar.ui.stores.StoresActivity"
-        android:label="activity_stores"
-        tools:layout="@layout/activity_stores" />
+        android:id="@+id/hyperMarketActivity"
+        android:name="com.example.bytar.ui.hyper_market.HyperMarketActivity"
+        android:label="activity_hyper_market"
+        tools:layout="@layout/activity_hyper_market" />
+    <activity
+        android:id="@+id/doctorsActivity"
+        android:name="com.example.bytar.ui.doctors.DoctorsActivity"
+        android:label="DoctorsActivity" />
+    <fragment
+        android:id="@+id/storesBytaryFragment"
+        android:name="com.example.bytar.ui.stores.StoresBytaryFragment"
+        android:label="StoresBytaryFragment" >
+        <action
+            android:id="@+id/action_storesBytaryFragment_to_addAdsFragment2"
+            app:destination="@id/addAdsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addAdsFragment"
+        android:name="com.example.bytar.ui.add_ads.AddAdsFragment"
+        android:label="AddAdsFragment" />
+    <fragment
+        android:id="@+id/storesFragment"
+        android:name="com.example.bytar.ui.stores.storetabs.StoresFragment"
+        android:label="StoresFragment" >
+        <action
+            android:id="@+id/action_storesFragment_to_addAdsFragment"
+            app:destination="@id/addAdsFragment" />
+    </fragment>
 </navigation>

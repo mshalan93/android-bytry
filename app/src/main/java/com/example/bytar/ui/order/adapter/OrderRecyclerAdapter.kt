@@ -26,7 +26,10 @@ class OrderRecyclerAdapter(private val context: Context, private val arrylist:Ar
 
         return arrylist.size
     }
-
+    fun removeAt(position: Int) {
+        arrylist.removeAt(position)
+        notifyItemRemoved(position)
+    }
     override fun onBindViewHolder(holder: CustomView, position: Int) {
         val orderViewModel = arrylist[position]
         holder.bind(orderViewModel)

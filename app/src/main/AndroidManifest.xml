@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -12,7 +13,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.splash.Splash" />
+        <activity android:name=".ui.doctors.DoctorsActivity" />
+        <activity android:name=".ui.hyper_market.HyperMarketActivity" />
+        <activity android:name=".ui.stores.StoresActivity" />
         <activity
             android:name=".ui.setting.SettingActivity"
             android:screenOrientation="portrait" />
@@ -22,9 +25,8 @@
         <activity
             android:name=".ui.SuccessActivity"
             android:screenOrientation="portrait" />
-
         <activity
-            android:name=".ui.stores.StoresActivity"
+            android:name=".ui.splash.Splash"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

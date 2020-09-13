@@ -61,7 +61,13 @@ class HomeFragment : Fragment() {
         init()
 
         binding.storesContainer.setOnClickListener {
-            findNavController().navigate(R.id.action_homeFragment_to_storesActivity)
+            findNavController().navigate(R.id.action_homeFragment_to_storesBytaryFragment)
+        }
+        binding.doctorContainer.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_doctorsActivity)
+        }
+        binding.supermarketContainer.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_hyperMarketActivity)
         }
 
 

@@ -13,6 +13,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.bytar.databinding.FragmentOrderBinding
 import com.example.bytar.ui.order.adapter.OrderRecyclerAdapter
 import com.example.bytar.ui.order.viewmodel.OrderViewModel
+import androidx.recyclerview.widget.ItemTouchHelper
+import androidx.recyclerview.widget.RecyclerView
 
 class OrderFragment : Fragment() {
     lateinit var binding: FragmentOrderBinding
@@ -31,10 +33,23 @@ class OrderFragment : Fragment() {
 
         searchViewModel.getArrayList().observe(requireActivity(), Observer {
             customadapter=OrderRecyclerAdapter(requireContext(), it!!)
-            binding.orderRecyclerView?.layoutManager= LinearLayoutManager(activity)
-            binding.orderRecyclerView?.setAdapter(customadapter)
+            binding.orderRecyclerView.layoutManager= LinearLayoutManager(activity)
+
+            val swipeToDeleteCallback = object : SwipeToDeleteCallback() {
+                override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
+                    val pos = viewHolder.adapterPosition
+                    it.removeAt(pos)
+                    binding.orderRecyclerView.adapter?.notifyItemRemoved(pos)
+                }
+            }
+
+            val itemTouchHelper = ItemTouchHelper(swipeToDeleteCallback)
+            itemTouchHelper.attachToRecyclerView(binding.orderRecyclerView)
+
+            binding.orderRecyclerView.adapter=customadapter
 
         })
+
 
 
 

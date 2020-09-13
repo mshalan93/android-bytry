@@ -149,7 +149,7 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:drawablePadding="5dp"
-                android:text="الخريطة"
+                android:text="@string/map"
                 android:textColor="@color/colorPrimary"
                 app:drawableRightCompat="@drawable/location"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -183,7 +183,7 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:drawablePadding="5dp"
-                android:text="العنوان"
+                android:text="@string/adress"
                 android:textColor="@color/colorPrimary"
                 app:drawableRightCompat="@drawable/adress__1_"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -346,7 +346,7 @@
                 android:layout_width="150dp"
                 android:layout_height="32dp"
                 android:background="@drawable/rounded_corners"
-                android:text="21.3"
+                android:text="@string/_21_3"
                 android:textColor="@color/white"
                 app:layout_constraintBottom_toBottomOf="@+id/textView26"
                 app:layout_constraintEnd_toStartOf="@+id/textView26"
@@ -411,7 +411,8 @@
                 android:hint="@string/products___"
                 android:inputType="textMultiLine"
                 app:layout_constraintEnd_toEndOf="@+id/photo_of_store_txt"
-                app:layout_constraintTop_toBottomOf="@+id/photo_of_store_txt" />
+                app:layout_constraintTop_toBottomOf="@+id/photo_of_store_txt"
+                tools:ignore="RtlSymmetry" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
 </layout>

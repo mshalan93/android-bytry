@@ -87,6 +87,13 @@
     <string name="_2_600">السعر 2.600 رس</string>
     <string name="appointment_booking">حجز الموعد</string>
     <string name="doctor_rate">تقييم الطبيب</string>
+    <string name="hypermarket">هايبر ماركت</string>
+    <string name="doctor_bytary">حراج بيطري</string>
+    <string name="map">الخريطة</string>
+    <string name="adress">العنوان</string>
+    <string name="_21_3">21.3</string>
+    <string name="details">تفاصيل</string>
+    <string name="advisor_name">اسم المعلن</string>
 
 
 </resources>
