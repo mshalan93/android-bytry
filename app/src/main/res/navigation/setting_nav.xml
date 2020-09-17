@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/setting_nav"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/setting_nav"
     app:startDestination="@id/profileSettingFragment">
     <fragment
         android:id="@+id/profileSettingFragment"
@@ -13,5 +15,31 @@
     <fragment
         android:id="@+id/orderFragment"
         android:name="com.example.bytar.ui.order.OrderFragment"
-        android:label="OrderFragment" />
+        android:label="OrderFragment" >
+        <action
+            android:id="@+id/action_orderFragment_to_orderDetailsFragment"
+            app:destination="@id/orderDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderDetailsFragment"
+        android:name="com.example.bytar.ui.order_details.OrderDetailsFragment"
+        android:label="fragment_order_details"
+        tools:layout="@layout/fragment_order_details" >
+        <action
+            android:id="@+id/action_orderDetailsFragment_to_orderSentFragment"
+            app:destination="@id/orderSentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderSentFragment"
+        android:name="com.example.bytar.ui.order_sent.OrderSentFragment"
+        android:label="OrderSentFragment" >
+        <action
+            android:id="@+id/action_orderSentFragment_to_mainActivity2"
+            app:destination="@id/mainActivity2" />
+    </fragment>
+    <activity
+        android:id="@+id/mainActivity2"
+        android:name="com.example.bytar.ui.home.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
 </navigation>

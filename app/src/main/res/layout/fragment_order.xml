@@ -13,10 +13,23 @@
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:scrollbars="vertical"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/continues"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/continues"
+                    android:layout_width="158dp"
+                    android:layout_height="29dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/rounded_corners_green"
+                    android:padding="5dp"
+                    android:text="@string/continues"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,6 +1,5 @@
 package com.example.bytar.ui.order
 
-import android.R
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -15,6 +14,8 @@ import com.example.bytar.ui.order.adapter.OrderRecyclerAdapter
 import com.example.bytar.ui.order.viewmodel.OrderViewModel
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView
+import androidx.navigation.fragment.findNavController
+import com.example.bytar.R
 
 class OrderFragment : Fragment() {
     lateinit var binding: FragmentOrderBinding
@@ -26,6 +27,12 @@ class OrderFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentOrderBinding.inflate(inflater, container, false)
+
+
+
+         binding.continues.setOnClickListener {
+             findNavController().navigate(R.id.action_orderFragment_to_orderDetailsFragment)
+         }
 
 
         var searchViewModel=

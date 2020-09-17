@@ -94,6 +94,16 @@
     <string name="_21_3">21.3</string>
     <string name="details">تفاصيل</string>
     <string name="advisor_name">اسم المعلن</string>
+    <string name="continues">متابعة</string>
+    <string name="bill">اصدار فاتورة</string>
+    <string name="order">الطلب</string>
+    <string name="delivery_location">عنوان التوصيل</string>
+    <string name="delivery_time">وقت التوصيل</string>
+    <string name="order_price">سعر الطلب</string>
+    <string name="order_value">قمية التوصيل</string>
+    <string name="payment_ensurance">تاكيد الدفع</string>
+    <string name="beck_to_home">عودة إالي المتجر</string>
+    <string name="order_sent">تم إرسال الطلبية</string>
 
 
 </resources>
