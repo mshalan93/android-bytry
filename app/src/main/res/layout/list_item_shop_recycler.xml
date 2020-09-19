@@ -42,11 +42,11 @@
         </RelativeLayout>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:layout_width="50dp"
-            android:layout_height="25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="-17dp"
             android:elevation="15dp"
-            app:backgroundTint="@color/colorPrimary"/>
+            android:src="@drawable/group_1670"/>
     </LinearLayout>
 </layout>

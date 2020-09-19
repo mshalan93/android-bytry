@@ -7,54 +7,42 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <!-- TODO: Update blank fragment layout -->
 
         <TextView
             android:id="@+id/textView17"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            android:text="المعلومات الشخصية"
+            android:drawablePadding="5dp"
+            android:text="@string/personal_information"
             android:textColor="@color/colorPrimary"
-            app:layout_constraintEnd_toStartOf="@+id/imageView8"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/imageView8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="24dp"
-            android:src="@drawable/ic_person_pin"
-            app:layout_constraintBottom_toBottomOf="@+id/textView17"
+            app:drawableEndCompat="@drawable/user"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/textView55" />
+
 
         <EditText
             android:id="@+id/editTextTextPersonName2"
-            android:layout_width="163dp"
+            android:layout_width="130dp"
             android:layout_height="41dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/colorPrimary"
             android:ems="10"
             android:hint="@string/fristName"
             android:inputType="textPersonName"
             android:textAlignment="center"
-            android:backgroundTint="@color/colorPrimary"
             android:textColor="@color/colorPrimary"
             android:textColorHint="@color/colorPrimary"
-            app:layout_constraintBottom_toTopOf="@+id/guideline12"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName3"
+            app:layout_constraintEnd_toEndOf="@+id/textView17"
             app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
         <EditText
             android:id="@+id/editTextTextPersonName3"
-            android:layout_width="163dp"
+            android:layout_width="130dp"
             android:layout_height="41dp"
+            android:layout_marginEnd="8dp"
             android:backgroundTint="@color/colorPrimary"
             android:ems="10"
             android:hint="@string/familyName"
@@ -62,234 +50,375 @@
             android:textAlignment="center"
             android:textColor="@color/colorPrimary"
             android:textColorHint="@color/colorPrimary"
-            app:layout_constraintBottom_toTopOf="@+id/guideline12"
             app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName2"
-            app:layout_constraintHorizontal_bias="0.68"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName2"
-            app:layout_constraintVertical_bias="0.0" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline12"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.19" />
+            app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName2" />
 
         <TextView
             android:id="@+id/textView18"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:textColor="@color/colorPrimary"
             android:layout_marginEnd="16dp"
+            android:drawablePadding="5dp"
             android:text="@string/order_reciever_number"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView9"
-            app:layout_constraintEnd_toStartOf="@+id/imageView9"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/guideline12" />
-
-        <ImageView
-            android:id="@+id/imageView9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="24dp"
-            android:src="@drawable/ic_baseline_add_ic_call_24"
+            android:textColor="@color/colorPrimary"
+            app:drawableEndCompat="@drawable/path_8745"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/guideline12" />
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
 
         <EditText
             android:id="@+id/editTextTextPersonName4"
-            android:layout_width="340dp"
-            android:layout_height="42dp"
-            android:layout_marginBottom="8dp"
+            android:layout_width="288dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
             android:backgroundTint="@color/colorPrimary"
             android:ems="10"
             android:inputType="textPersonName"
             android:textColor="@color/colorPrimary"
             android:textColorHint="@color/colorPrimary"
-            app:layout_constraintBottom_toTopOf="@+id/guideline13"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/textView18"
+            app:layout_constraintTop_toBottomOf="@+id/textView18"
             tools:text="+966  " />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline13"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.35" />
 
         <TextView
             android:id="@+id/textView19"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:text="عنوان التوصيل"
-            android:textColor="@color/colorPrimary"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView10"
-            app:layout_constraintEnd_toStartOf="@+id/imageView10"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/guideline13"
-            app:layout_constraintVertical_bias="1.0" />
-
-        <ImageView
-            android:id="@+id/imageView10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="24dp"
-            android:src="@drawable/ic_baseline_home"
+            android:layout_marginEnd="16dp"
+            android:drawablePadding="5dp"
+            android:text="@string/delivery_location"
+            android:textColor="@color/colorPrimary"
+            app:drawableEndCompat="@drawable/adress__1_"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/guideline13" />
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName4" />
 
         <Button
             android:id="@+id/sign_as_dealer"
-            android:layout_width="218dp"
-            android:layout_height="36dp"
-            android:layout_marginBottom="8dp"
+            android:layout_width="288dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/rounded_corners_green"
+            android:drawableStart="@drawable/arrow_padding"
+            android:text="@string/location_on_map"
+            android:textAlignment="center"
             android:textColor="@color/ms_white"
-            android:background="@drawable/rounded_corners"
-            android:text="تحديد الموقع عبر الخريطة "
-            app:layout_constraintBottom_toTopOf="@+id/button4"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/guideline13"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintEnd_toEndOf="@+id/textView19"
+            app:layout_constraintTop_toBottomOf="@+id/textView19" />
 
         <Button
             android:id="@+id/button4"
-            android:layout_width="218dp"
-            android:layout_height="36dp"
-            android:layout_marginBottom="16dp"
+            android:layout_width="288dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rounded_edittext_focused"
             android:text="@string/please_write_more_details"
-            android:textColor="@color/ms_white"
-            android:background="@drawable/rounded_corners"
-            app:layout_constraintBottom_toTopOf="@+id/guideline14"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline14"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.55" />
-
-        <ImageView
-            android:id="@+id/imageView11"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="24dp"
-            android:src="@drawable/edit"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/guideline14" />
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="@+id/sign_as_dealer"
+            app:layout_constraintTop_toBottomOf="@+id/sign_as_dealer" />
 
         <TextView
             android:id="@+id/textView20"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            android:text="هل لديك ملاحظات للمندوب"
+            android:drawablePadding="5dp"
+            android:text="@string/delivery_comment"
             android:textColor="@color/colorPrimary"
-            app:layout_constraintEnd_toStartOf="@+id/imageView11"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/imageView11" />
+            app:drawableEndCompat="@drawable/paper"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button4" />
 
         <EditText
             android:id="@+id/editTextTextMultiLine"
-            android:layout_width="297dp"
-            android:layout_height="94dp"
-            android:layout_marginBottom="16dp"
+            android:layout_width="288dp"
+            android:layout_height="78dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/rounded_edittext_focused"
             android:ems="10"
             android:gravity="start|top"
             android:inputType="textMultiLine"
-            android:textColorHighlight="#FFF"
-            app:layout_constraintBottom_toTopOf="@+id/guideline15"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:backgroundTint="@color/colorPrimary"
             android:textColor="@color/colorPrimary"
-            app:layout_constraintHorizontal_bias="0.657"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline15"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.79" />
+            app:layout_constraintEnd_toEndOf="@+id/textView20"
+            app:layout_constraintTop_toBottomOf="@+id/textView20" />
 
         <TextView
             android:id="@+id/textView21"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            android:text="وقت التواصل"
-            app:layout_constraintEnd_toStartOf="@+id/imageView13"
-            app:layout_constraintTop_toTopOf="@+id/imageView13" />
+            android:drawablePadding="5dp"
+            android:text="@string/delivery_time"
+            android:textColor="@color/colorPrimary"
+            app:drawableEndCompat="@drawable/order"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine" />
 
         <ImageView
             android:id="@+id/imageView12"
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:src="@drawable/photo"
+            tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="399dp"
-            tools:layout_editor_absoluteY="830dp"
-            tools:ignore="MissingConstraints" />
+            tools:layout_editor_absoluteY="830dp" />
 
         <Button
             android:id="@+id/button5"
-            android:layout_width="218dp"
-            android:layout_height="36dp"
+            android:layout_width="288dp"
+            android:layout_height="31dp"
             android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
             android:background="@drawable/rounded_corners"
+            android:drawableStart="@drawable/arrow_padding"
             android:text="الثلاثاء 26 نوفمبر"
             android:textColor="@color/ms_white"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/textView21"
             app:layout_constraintTop_toBottomOf="@+id/textView21" />
 
-        <ImageView
-            android:id="@+id/imageView13"
+
+        <TextView
+            android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="24dp"
+            android:layout_marginEnd="16dp"
+            android:drawablePadding="5dp"
+            android:text="@string/payment_traffic"
+            android:textColor="@color/colorPrimary"
+            app:drawableEndCompat="@drawable/money__1_"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/guideline15"
-            app:srcCompat="@drawable/order" />
-
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline11"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.90" />
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName6" />
 
         <TextView
             android:id="@+id/textView22"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            android:text="كوبون التخفيض"
-            app:layout_constraintEnd_toStartOf="@+id/imageView14"
-            app:layout_constraintTop_toTopOf="@+id/imageView14" />
+            android:drawablePadding="5dp"
+            android:text="@string/coupon"
+            android:textColor="@color/colorPrimary"
+            app:drawableEndCompat="@drawable/coupon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button5" />
 
-        <ImageView
-            android:id="@+id/imageView14"
+        <EditText
+            android:id="@+id/editTextTextPersonName6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Name"
+            app:layout_constraintEnd_toEndOf="@+id/textView22"
+            app:layout_constraintTop_toBottomOf="@+id/textView22" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView3"
+            android:layout_width="87dp"
+            android:layout_height="45dp"
+            android:layout_margin="5dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:cardCornerRadius="15dp"
+            app:layout_constraintEnd_toStartOf="@+id/cardView2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/cardView4"
+            app:layout_constraintTop_toBottomOf="@+id/textView">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/rounded_edittext_focused">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/mada"></ImageView>
+            </FrameLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView4"
+            android:layout_width="87dp"
+            android:layout_height="45dp"
+            android:layout_margin="5dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:cardCornerRadius="15dp"
+            app:layout_constraintEnd_toStartOf="@+id/cardView3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/rounded_edittext_focused">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/group_2082"></ImageView>
+            </FrameLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView2"
+            android:layout_width="87dp"
+            android:layout_height="45dp"
+            android:layout_margin="5dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:cardCornerRadius="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/cardView3"
+            app:layout_constraintTop_toBottomOf="@+id/textView">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/rounded_edittext_focused">
+
+                <TextView
+                    android:id="@+id/textView51"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="نقدا"
+                    app:layout_constraintBottom_toTopOf="@+id/textView52"
+                    app:layout_constraintEnd_toStartOf="@+id/imageView9"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView52"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Cash"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView51" />
+
+                <ImageView
+                    android:id="@+id/imageView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/money"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"></ImageView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/back_to_home"
+            android:layout_width="122dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_grey_btn"
+            android:padding="7dp"
+            android:text="@string/back"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            app:drawableRightCompat="@drawable/arrow_right"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/to_payemnt_enusance"
+            app:layout_constraintTop_toBottomOf="@+id/cardView2" />
+
+        <TextView
+            android:id="@+id/to_payemnt_enusance"
+            android:layout_width="122dp"
+            android:layout_height="35dp"
+            android:background="@drawable/rounded_corners"
+            android:padding="7dp"
+            android:text="@string/continues"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            app:drawableLeftCompat="@drawable/arrow_padding"
+            app:layout_constraintEnd_toStartOf="@+id/back_to_home"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/back_to_home" />
+
+        <TextView
+            android:id="@+id/textView55"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="24dp"
+            android:layout_marginEnd="16dp"
+            android:drawableTop="@drawable/commerce_and_shopping"
+            android:text="@string/shopping_reservation"
+            android:textColor="@color/colorPrimary"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/guideline11"
-            app:srcCompat="@drawable/photo" />
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imageView10"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="5dp"
+            android:layout_height="11dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView55"
+            app:layout_constraintEnd_toStartOf="@+id/textView55"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textView33"
+            app:layout_constraintTop_toTopOf="@+id/textView55"
+            app:srcCompat="@drawable/path_8730" />
+
+        <TextView
+            android:id="@+id/textView33"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/online_yellow"
+            android:text="@string/deliver_fee"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintEnd_toStartOf="@+id/imageView10"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imageView22"
+            app:layout_constraintTop_toTopOf="@+id/textView55" />
+
+        <ImageView
+            android:id="@+id/imageView22"
+            android:layout_width="5dp"
+            android:layout_height="11dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView44"
+            app:layout_constraintEnd_toStartOf="@+id/textView33"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textView44"
+            app:layout_constraintTop_toTopOf="@+id/textView44"
+            app:srcCompat="@drawable/path_8730" />
+
+        <TextView
+            android:id="@+id/textView44"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:drawableTop="@drawable/business_and_finance__1_"
+            android:text="الدفع والتاكيد"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintEnd_toStartOf="@+id/imageView22"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

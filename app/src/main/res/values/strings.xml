@@ -104,6 +104,13 @@
     <string name="payment_ensurance">تاكيد الدفع</string>
     <string name="beck_to_home">عودة إالي المتجر</string>
     <string name="order_sent">تم إرسال الطلبية</string>
+    <string name="location_on_map">تحديد الموقع عبر الخريطة</string>
+    <string name="delivery_comment">هل لديك ملاحظات للمندوب</string>
+    <string name="coupon">كوبون التخفيض</string>
+    <string name="payment_traffic">طريقة الدفع</string>
+    <string name="back">عودة</string>
+    <string name="shopping_reservation">مراجعة المشتريات</string>
+    <string name="deliver_fee">رسوم التوصيل و العنوان</string>
 
 
 </resources>
