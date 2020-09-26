@@ -9,6 +9,7 @@
         android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <TextView
             android:id="@+id/textView55"
             android:layout_width="wrap_content"
@@ -38,14 +39,14 @@
             android:id="@+id/textView33"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:drawableTop="@drawable/online"
             android:text="@string/deliver_fee"
             android:textColor="@color/colorAccent"
             app:layout_constraintBottom_toBottomOf="@+id/textView55"
             app:layout_constraintEnd_toStartOf="@+id/imageView10"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/imageView22"
-            app:layout_constraintTop_toTopOf="@+id/textView55" />
+            app:layout_constraintTop_toTopOf="@+id/textView55"
+            app:drawableTopCompat="@drawable/online" />
 
         <ImageView
             android:id="@+id/imageView22"
@@ -63,14 +64,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:drawableTop="@drawable/business_and_finance__1_"
-            android:text="الدفع والتاكيد"
+            android:text="@string/pay_ensure"
             android:textColor="@color/colorAccent"
             app:layout_constraintBottom_toBottomOf="@+id/textView33"
             app:layout_constraintEnd_toStartOf="@+id/imageView22"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/textView33" />
+            app:layout_constraintTop_toTopOf="@+id/textView33"
+            app:drawableTopCompat="@drawable/business_and_finance__1_" />
 
 
         <androidx.recyclerview.widget.RecyclerView
@@ -100,7 +101,6 @@
             android:layout_marginTop="32dp"
             android:layout_marginEnd="28dp"
             android:text="سعر المنتجات"
-            android:textSize="22sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
@@ -111,7 +111,6 @@
             android:layout_marginTop="32dp"
             android:layout_marginEnd="32dp"
             android:text="ضريبة المبيعات"
-            android:textSize="22sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/guideline9" />
 
@@ -121,7 +120,6 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="60dp"
             android:text="%5"
-            android:textSize="22sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/textView14" />
 
@@ -131,9 +129,23 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="60dp"
             android:text="60"
-            android:textSize="22sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/textView13" />
+
+        <TextView
+            android:id="@+id/to_delviery_fee"
+            android:layout_width="122dp"
+            android:layout_height="35dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/rounded_corners"
+            android:padding="7dp"
+            android:text="@string/continues"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            app:drawableLeftCompat="@drawable/arrow_padding"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

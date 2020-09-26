@@ -7,7 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.GridLayoutManager
+import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.viewpager.widget.ViewPager
 import com.example.bytar.R
 import com.example.bytar.databinding.FragmentShopBinding
@@ -16,6 +17,7 @@ import com.example.bytar.ui.shop.adapter.SlidingAdapter
 import com.example.bytar.ui.shop.model.SlidingModel
 import com.example.bytar.ui.shop.viewmodel.ShopViewModel
 import java.util.*
+
 
 class ShopFragment : Fragment() {
     var mPager: ViewPager?=null
@@ -38,16 +40,13 @@ class ShopFragment : Fragment() {
         var shopViewModel: ShopViewModel=
                 ViewModelProvider.NewInstanceFactory().create(ShopViewModel::class.java)
 
+        binding.toDelvieryFee.setOnClickListener {
+            findNavController().navigate(R.id.action_shopFragment_to_deliveryFeeFragment)
+        }
+
         shopViewModel.getArrayList().observe(requireActivity(), androidx.lifecycle.Observer {
             customadapter=ShopRecyclerAdapter(requireContext(), it!!)
-            binding.shopRecyclerview.setLayoutManager(
-                GridLayoutManager(
-                    requireContext(),
-                    3,
-                    GridLayoutManager.VERTICAL,
-                    false
-                )
-            )
+            binding.shopRecyclerview.layoutManager = LinearLayoutManager(activity)
             binding.shopRecyclerview.setAdapter(customadapter)
 
         })

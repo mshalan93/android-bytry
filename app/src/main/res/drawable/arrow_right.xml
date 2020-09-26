@@ -2,6 +2,7 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item>
-        <inset android:drawable="@drawable/path_8743" android:insetRight="20dp"/>
+        <inset android:drawable="@drawable/path_8743"
+            android:insetRight="20dp" />
     </item>
 </selector>

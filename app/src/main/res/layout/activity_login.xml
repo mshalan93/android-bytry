@@ -10,6 +10,10 @@
             type="com.example.bytar.ui.auth.LoginViewModel" />
     </data>
 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/group_1710">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/root_layout"
         android:layout_width="match_parent"
@@ -101,7 +105,7 @@
 
         <LinearLayout
             android:id="@+id/buttonSignIn"
-            android:layout_width="250dp"
+            android:layout_width="271dp"
             android:layout_height="wrap_content"
             android:background="@drawable/rounded_corners"
             android:orientation="horizontal"
@@ -109,14 +113,14 @@
             app:layout_constraintBottom_toTopOf="@+id/textView4"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword">
+            app:layout_constraintTop_toBottomOf="@+id/button2">
 
             <TextView
                 android:id="@+id/sign_as_baytary"
-                android:layout_marginStart="4dp"
-                android:layout_marginEnd="4dp"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
                 android:layout_weight="1"
                 android:text="@string/sign_as_baytary"
                 android:textColor="@color/colorWhite" />
@@ -124,23 +128,22 @@
             <TextView
                 android:id="@+id/sign_as_dealer"
                 android:layout_width="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginStart="4dp"
                 android:layout_marginEnd="4dp"
-                android:layout_height="match_parent"
-                android:background="@drawable/left_border_white"
                 android:layout_weight="1"
+                android:background="@drawable/left_border_white"
                 android:text="@string/sign_as_dealer"
                 android:textColor="@color/colorWhite" />
 
             <TextView
                 android:id="@+id/sign_as_visitor"
                 android:layout_width="wrap_content"
-                android:background="@drawable/left_border_white"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:layout_marginStart="4dp"
-                android:layout_marginEnd="4dp"
+                android:background="@drawable/left_border_white"
                 android:text="@string/sign_as_visitor"
+                android:textAlignment="center"
                 android:textColor="@color/colorWhite" />
         </LinearLayout>
         <TextView
@@ -153,7 +156,9 @@
             app:layout_constraintBottom_toTopOf="@+id/guideline5"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
 </layout>
 

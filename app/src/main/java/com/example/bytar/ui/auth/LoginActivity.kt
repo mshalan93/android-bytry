@@ -26,8 +26,7 @@ class LoginActivity : AppCompatActivity(){
         binding.setLifecycleOwner(this)
 
         binding.buttonSignIn.setOnClickListener {
-            val nextScreenIntent =Intent(this, MainActivity::class.java)
-            startActivity(nextScreenIntent)
+            viewModel.Login()
         }
     }
 

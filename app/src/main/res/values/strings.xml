@@ -111,6 +111,13 @@
     <string name="back">عودة</string>
     <string name="shopping_reservation">مراجعة المشتريات</string>
     <string name="deliver_fee">رسوم التوصيل و العنوان</string>
+    <string name="pay_online">إدفع اونلاين</string>
+    <string name="order_ensure">تأكيد الطلب</string>
+    <string name="order_success">تم تأكيد الطلب بنجاح</string>
+    <string name="tracking_order">تتبع حاله الطلب</string>
+    <string name="order_num">رقم طلبك</string>
+    <string name="pay_ensure">الدفع والتاكيد</string>
+    <string name="activate">تفعيل</string>
 
 
 </resources>

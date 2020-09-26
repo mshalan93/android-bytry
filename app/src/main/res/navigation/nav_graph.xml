@@ -37,7 +37,11 @@
         android:id="@+id/shopFragment"
         android:name="com.example.bytar.ui.shop.ShopFragment"
         android:label="fragment_shop"
-        tools:layout="@layout/fragment_shop" />
+        tools:layout="@layout/fragment_shop" >
+        <action
+            android:id="@+id/action_shopFragment_to_deliveryFeeFragment"
+            app:destination="@id/deliveryFeeFragment" />
+    </fragment>
     <activity
         android:id="@+id/hyperMarketActivity"
         android:name="com.example.bytar.ui.hyper_market.HyperMarketActivity"
@@ -66,5 +70,36 @@
         <action
             android:id="@+id/action_storesFragment_to_addAdsFragment"
             app:destination="@id/addAdsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/deliveryFeeFragment"
+        android:name="com.example.bytar.ui.deliveryFee.DeliveryFeeFragment"
+        android:label="DeliveryFeeFragment" >
+        <action
+            android:id="@+id/action_deliveryFeeFragment_to_paymentEnsuranceFragment"
+            app:destination="@id/paymentEnsuranceFragment" />
+        <action
+            android:id="@+id/action_deliveryFeeFragment_to_shopFragment"
+            app:destination="@id/shopFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentEnsuranceFragment"
+        android:name="com.example.bytar.ui.payment_ensurance.PaymentEnsuranceFragment"
+        android:label="fragment_payment_ensurance"
+        tools:layout="@layout/fragment_payment_ensurance" >
+        <action
+            android:id="@+id/action_paymentEnsuranceFragment_to_paymentOrderSuccessFragment"
+            app:destination="@id/paymentOrderSuccessFragment" />
+        <action
+            android:id="@+id/action_paymentEnsuranceFragment_to_deliveryFeeFragment"
+            app:destination="@id/deliveryFeeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentOrderSuccessFragment"
+        android:name="com.example.bytar.ui.order_payment_success.PaymentOrderSuccessFragment"
+        android:label="PaymentOrderSuccessFragment" >
+        <action
+            android:id="@+id/action_paymentOrderSuccessFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
     </fragment>
 </navigation>

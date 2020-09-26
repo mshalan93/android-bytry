@@ -35,15 +35,20 @@ class LoginViewModel : ViewModel() {
      */
 
       fun Login() {
-        // _response.value = "Set the Mars API Response here!"
+
      coroutineScope.launch {
-            var LoginDeferred = LoginApi.retrofitService.Login(email ="mohamed@gmail.com" ,password = "123")
+            val LoginDeferred = LoginApi.retrofitService.Login( phone ="+966547551611" ,password = "0163212392",language = "ar",device_type = 2121,notification_id = 2125412,os_version = "10.3")
             try {
-                var listResult = LoginDeferred.await()
+                val listResult = LoginDeferred.await()
                 _response.value = "Success: yu are Loged in"
+                Log.d("login response",listResult[0].toString() + " " + listResult[0].success  +  listResult[0].data)
+
             } catch (e: Exception) {
                 _response.value = "Failure: ${e.message}"
+                Log.d("login error response","${e.message}" )
+
             }
+
         }
     }
 
