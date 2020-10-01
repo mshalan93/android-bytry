@@ -1,4 +1,4 @@
-package com.example.bytar.ui.auth.register
+package com.example.bytar.ui.auth.register.signupastrader
 
 import android.os.Bundle
 import android.text.Html

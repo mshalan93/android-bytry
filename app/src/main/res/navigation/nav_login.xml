@@ -29,7 +29,7 @@
     </fragment>
     <fragment
         android:id="@+id/signUpAsTraderFragment"
-        android:name="com.example.bytar.ui.auth.register.SignUpAsTraderFragment"
+        android:name="com.example.bytar.ui.auth.register.signupastrader.SignUpAsTraderFragment"
         android:label="SignUpAsTraderFragment" >
         <action
             android:id="@+id/action_signUpAsTraderFragment_to_signUpSuccessFragment"
@@ -37,7 +37,7 @@
     </fragment>
     <fragment
         android:id="@+id/signUpAsVistorFragment"
-        android:name="com.example.bytar.ui.auth.register.SignUpAsVistorFragment"
+        android:name="com.example.bytar.ui.auth.register.registerasvistor.SignUpAsVistorFragment"
         android:label="SignUpAsVistorFragment" >
         <action
             android:id="@+id/action_signUpAsVistorFragment_to_signUpSuccessFragment"
@@ -45,7 +45,7 @@
     </fragment>
     <fragment
         android:id="@+id/registerAsDoctorFragment"
-        android:name="com.example.bytar.ui.auth.register.SignUpAsDoctorFragment"
+        android:name="com.example.bytar.ui.auth.register.signupasdoctor.SignUpAsDoctorFragment"
         android:label="RegisterAsDoctorFragment" >
         <action
             android:id="@+id/action_registerAsDoctorFragment_to_signUpSuccessFragment"

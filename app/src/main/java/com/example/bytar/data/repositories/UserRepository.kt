@@ -1,6 +1,6 @@
 package com.example.bytar.data.repositories
 
-import com.example.bytar.data.network.LoginApiService
+import com.example.bytar.data.network.ApiService
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
@@ -20,7 +20,7 @@ private val retrofit = Retrofit.Builder()
     .build()
 
 object LoginApi {
-    val retrofitService : LoginApiService by lazy {
-        retrofit.create(LoginApiService::class.java)
+    val RETROFIT_SERVICE : ApiService by lazy {
+        retrofit.create(ApiService::class.java)
     }
 }

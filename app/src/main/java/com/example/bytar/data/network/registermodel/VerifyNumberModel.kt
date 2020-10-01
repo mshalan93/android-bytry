@@ -1,10 +1,10 @@
-package com.example.bytar.data.network.LoginModels
+package com.example.bytar.data.network.registermodel
 
 import com.google.gson.annotations.SerializedName
-import com.squareup.moshi.Json
 
-data class LoginResponseModel(
+data class VerifyNumberModel (
+
     @SerializedName("success") val success : Boolean,
     @SerializedName("message") val message : String,
-    @SerializedName("data") val data : Data
+    @SerializedName("data") val data : Int
 )
